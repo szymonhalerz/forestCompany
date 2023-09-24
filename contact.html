@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ForestCompany</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/20e2212097.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="dist/css/hamburger.min.css" />
+		<link rel="stylesheet" href="dist/css/main.min.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="wrapper">
+				<div class="navbar">
+					<div class="brand-logo">
+						<a href="index.html"><i class="fa-solid fa-tree"></i>Forest</a>
+					</div>
+
+					<button class="hamburger hamburger--spin" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+
+					<!-- nav-mobile--active -->
+					<nav class="nav nav-mobile">
+						<a class="nav__link" href="index.html">Home</a>
+						<a class="nav__link" href="#aboutus">O nas</a>
+						<a class="nav__link" href="#offer">Oferty</a>
+						<a class="nav__link" href="contact.html">Kontakt</a>
+					</nav>
+					<nav class="nav nav-desktop">
+						<a class="nav__link" href="index.html">Home</a>
+						<a class="nav__link" href="#aboutus">O nas</a>
+						<a class="nav__link" href="#offer">Oferty</a>
+						<a class="nav__link" href="contact.html">Kontakt</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div class="hero-banner">
+			<div class="hero-img">
+				<div class="hero__shadow"></div>
+				<div class="hero__text wrapper">
+					<p>Forest Group</p>
+					<h1>Najpiękniejszy park w Twojej okolicy!</h1>
+				</div>
+			</div>
+		</div>
+
+		<main class="main">
+			<section class="wrapper">
+				<h2 class="section-title">Kontakt</h2>
+
+				<div class="contact" id="contact">
+					<p class="sub-title">Skontaktuj się z nami poprzez formularz lub przez nasze social media.</p>
+
+					<div class="form-box">
+						<form>
+							<input type="text" class="name" placeholder="Podaj imię" />
+							<input type="text" class="surname" placeholder="Podaj nazwisko" />
+							<input type="email" class="email" placeholder="Podaj adres e-mail" />
+							<textarea class="msg" placeholder="Twoja wiadomość"></textarea>
+
+							<div class="btns">
+								<button class="send">Wyślij</button>
+								<button class="clear">Wyczyść</button>
+							</div>
+						</form>
+					</div>
+
+					<div class="google-map">
+						<p class="sub-title">Naszą lokalizację masz poniżej <i class="fa-solid fa-arrow-down"></i></p>
+
+						<iframe
+							class="map"
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10239.592929627293!2d19.8928442!3d50.0881922!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1695558736851!5m2!1spl!2spl"
+							width="600"
+							height="450"
+							style="border: 0"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer__top">
+					<div class="footer__top--brand-logo">
+						<a href="index.html"><i class="fa-solid fa-tree"></i>Forest</a>
+					</div>
+
+					<div class="footer__top-links">
+						<div class="link-container">
+							<h3>O nas</h3>
+							<a href="#">Historia</a>
+							<a href="#">Parki</a>
+							<a href="#">Opinie</a>
+						</div>
+
+						<div class="link-container">
+							<h3>Nasza firma</h3>
+							<a href="#">Praca</a>
+							<a href="#">Kadry</a>
+							<a href="#">Zarząd</a>
+						</div>
+
+						<div class="link-container">
+							<h3>Dokumenty</h3>
+							<a href="#">Wnioski</a>
+							<a href="#">Rezerwacje</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<p class="footer__bottom-text">&copy;<span class="footer__year">2023</span> Forest Group Company Ltd.</p>
+			</div>
+		</footer>
+
+		<script src="dist/js/main.min.js"></script>
+	</body>
+</html>
