@@ -3,9 +3,6 @@ const navMobile = document.querySelector('.nav-mobile')
 const navDesktop = document.querySelector('.nav-desktop')
 const footerYear = document.querySelector('.footer__year')
 
-const menuItems = navDesktop.querySelectorAll('a.nav__link')
-const scrollSpySections = document.querySelectorAll('section.wrapper')
-
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
@@ -25,32 +22,57 @@ navMobile.querySelectorAll('a.nav__link').forEach(el =>
 	})
 )
 
-const handleScrollSpy = () => {
-	if (document.body.classList.contains('main-page')) {
-		const sections = []
+//------------------------------------------------------------------
 
-		scrollSpySections.forEach(section => {
-			if (window.scrollY <= section.offsetTop + section.offsetHeight - 103) {
-				sections.push(section)
+// OSTATNIE ZMIANY
 
-				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
+// const sections = document.querySelectorAll('section')
+// const navLinks = navDesktop.querySelectorAll('a.nav__link')
 
-				menuItems.forEach(item => item.classList.remove('active'))
+// window.onscroll = () => {
+// 	sections.forEach(sec => {
+// 		let top = window.scrollY
+// 		let offset = sec.offsetTop - 150
+// 		let height = sec.offsetHeight
+// 		let id = sec.getAttribute('id')
 
-				activeSection.classList.add('active')
-			}
+// 		if (top >= offset && top < offset + height) {
+// 			navLinks.forEach(links => {
+// 				links.classList.remove('active')
+// 				document.querySelector(`.nav-desktop a.nav__link[href*="${id}"]`).classList.add('active')
+// 			})
+// 		}
+// 	})
+// }
 
-			// if ( window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
-			//     const lastSection = document.querySelector('a:last-of-type')
+//------------------------------------------------------------------
 
-			//     menuItems.forEach(item => item.classList.remove('active'))
+// const handleScrollSpy = () => {
+// 	if (document.body.classList.contains('main-page')) {
+// 		const sections = []
 
-			//     lastSection.classList.add('active')
-			// }
-		})
-	}
-}
+// 		scrollSpySections.forEach(section => {
+// 			if (window.scrollY <= section.offsetTop + section.offsetHeight - 103) {
+// 				sections.push(section)
+
+// 				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
+
+// 				menuItems.forEach(item => item.classList.remove('active'))
+
+// 				activeSection.classList.add('active')
+// 			}
+
+// 			// if ( window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+// 			//     const lastSection = document.querySelector('a:last-of-type')
+
+// 			//     menuItems.forEach(item => item.classList.remove('active'))
+
+// 			//     lastSection.classList.add('active')
+// 			// }
+// 		})
+// 	}
+// }
 
 handleCurrentYear()
 burgerBtn.addEventListener('click', handleNav)
-window.addEventListener('scroll', handleScrollSpy)
+// window.addEventListener('scroll', handleScrollSpy)
