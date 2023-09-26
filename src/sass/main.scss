@@ -44,8 +44,6 @@ body {
 
 .acitve {
 	font-weight: bold;
-	color: c.$green;
-	background-color: red;
 }
 
 // header
@@ -97,43 +95,6 @@ body {
 		}
 
 		.nav {
-			// &-mobile {
-			// 	position: absolute;
-			// 	display: flex;
-			// 	flex-direction: column;
-			// 	justify-content: center;
-			// 	align-items: center;
-			// 	top: 0;
-			// 	left: 0;
-			// 	right: 0;
-			// 	bottom: 0;
-			// 	width: 100%;
-			// 	height: 100%;
-			// 	background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-			// 	// background-color: #fff;
-			// 	transform: translateX(-102%);
-			// 	transition: transform 0.3s;
-			// 	z-index: 10;
-
-			// 	&--active {
-			// 		transform: translateX(0);
-			// 	}
-
-			// 	a.nav__link {
-			// 		margin: 0.8em 0em;
-			// 		padding: 0.3em;
-			// 		color: c.$white;
-			// 		font-size: 1.8rem;
-			// 		border-bottom: 1px solid c.$white;
-			// 		transition: font-weight 0.3s, transform 0.3s;
-
-			// 		&:hover {
-			// 			font-weight: bold;
-			// 			transform: scale(1.2);
-			// 		}
-			// 	}
-			// }
-
 			&-desktop {
 				display: none;
 			}
@@ -628,13 +589,26 @@ body {
 	//main
 	.main {
 		.aboutus {
-			padding: 0em 3em;
+			flex-direction: row;
+			justify-content: space-around;
+
+			&__img,
+			&__text {
+				width: 50%;
+				height: 50%;
+			}
+
+			&__img {
+				margin-right: 1.5em;
+			}
 
 			&__text {
-				line-height: 2.7rem;
+				font-size: 1.4rem;
+				line-height: 2.8rem;
 
 				h3 {
 					font-size: 1.8rem;
+					margin-bottom: 0.4em;
 				}
 			}
 		}
@@ -808,13 +782,15 @@ body {
 	// main
 	.main {
 		.aboutus {
-			flex-direction: row;
-			justify-content: space-around;
 			padding: 0em 3em;
 
 			&__img,
 			&__text {
 				width: 45%;
+			}
+
+			&__img {
+				margin-right: 0;
 			}
 
 			&__text {
