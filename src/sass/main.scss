@@ -42,6 +42,10 @@ body {
 	font-size: 2rem;
 }
 
+.acitve {
+	color: c.$green !important;
+}
+
 // header
 .header {
 	position: fixed;
@@ -142,7 +146,7 @@ body {
 }
 
 .nav-mobile {
-	position: absolute;
+	position: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

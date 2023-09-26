@@ -10,17 +10,13 @@ const handleCurrentYear = () => {
 const handleNav = () => {
 	document.body.classList.toggle('sticky-body')
 	navMobile.classList.toggle('nav-mobile--active')
-
-	if (document.body.classList.contains('sticky-body')) {
-		burgerBtn.classList.toggle('is-active')
-	} else {
-		burgerBtn.classList.remove('is-active')
-	}
+	burgerBtn.classList.toggle('is-active')
 }
 
 navMobile.querySelectorAll('a.nav__link').forEach(el =>
 	el.addEventListener('click', () => {
 		navMobile.classList.remove('nav-mobile--active')
+		burgerBtn.classList.remove('is-active')
 	})
 )
 
