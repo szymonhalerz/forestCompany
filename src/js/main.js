@@ -5,7 +5,6 @@ const footerYear = document.querySelector('.footer__year')
 const menuItems = navDesktop.querySelectorAll('a.nav__link')
 const scrollSpySections = document.querySelectorAll('.section')
 
-
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
@@ -26,21 +25,30 @@ navMobile.querySelectorAll('a.nav__link').forEach(el =>
 )
 
 const handleScrollSpy = () => {
-	const sections = []
+	if (document.body.classList.contains('main-page')) {
+		const sections = []
 
-	scrollSpySections.forEach(section => {
-		if(window.scrollY <= section.offsetTop + section.offsetHeight) {
-			sections.push(section)
+		scrollSpySections.forEach(section => {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 200) {
+				sections.push(section)
 
-			const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
+				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
+				console.log(activeSection);
+				
+				menuItems.forEach(item => item.classList.remove('active'))
 
-			console.log(activeSection);
+				activeSection.classList.add('active')
+			}
 
-			menuItems.forEach(item => item.classList.remove('active'))
+			// if ( window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+            //     const lastSection = document.querySelector('a:last-of-type')
 
-			activeSection.classList.add('active')
-		}
-	})
+            //     menuItems.forEach(item => item.classList.remove('active'))
+
+            //     lastSection.classList.add('active')
+            // }
+		})
+	}
 }
 
 handleCurrentYear()
