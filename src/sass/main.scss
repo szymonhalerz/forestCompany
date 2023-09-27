@@ -42,11 +42,6 @@ body {
 	font-size: 2rem;
 }
 
-.acitve {
-	font-weight: bold;
-	color: c$green !important;
-}
-
 // header
 .header {
 	position: fixed;
@@ -104,6 +99,12 @@ body {
 				position: relative;
 				display: inline-block;
 				text-decoration: none;
+
+			}
+			
+			.acitve {
+				font-weight: bold;
+				color: c.$green;
 			}
 		}
 	}
