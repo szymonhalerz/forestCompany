@@ -184,7 +184,7 @@ body {
 	}
 
 	a.nav__link {
-		margin: 1em 0em;
+		margin: 0.7em 0em;
 		padding: 0.3em 1em;
 		color: c.$white;
 		font-size: 2rem;
@@ -566,9 +566,15 @@ body {
 			}
 
 			textarea {
-				margin-bottom: 2em;
+				margin-bottom: 1em;
 				min-height: 8em;
 				resize: vertical;
+			}
+
+			.rodo-box {
+				margin-bottom: 2.2em;
+				max-width: 800px;
+				font-size: 1.1rem;
 			}
 
 			.btns {
