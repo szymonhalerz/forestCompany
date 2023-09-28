@@ -4,11 +4,17 @@ const navDesktop = document.querySelector('.nav-desktop')
 const footerYear = document.querySelector('.footer__year')
 const menuItems = navDesktop.querySelectorAll('a.nav__link')
 const scrollSpySections = document.querySelectorAll('.section')
+const cookieBox = document.querySelector('.cookie-box')
+const cookieBtn = document.querySelector('.cookie-btn')
+
+// ----------------------------------------
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
 }
+
+// ----------------------------------------
 
 const handleNav = () => {
 	document.body.classList.toggle('sticky-body')
@@ -33,8 +39,8 @@ const handleScrollSpy = () => {
 				sections.push(section)
 
 				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
-				console.log(activeSection);
-				
+				console.log(activeSection)
+
 				menuItems.forEach(item => item.classList.remove('active'))
 
 				activeSection.classList.add('active')
@@ -43,8 +49,25 @@ const handleScrollSpy = () => {
 	}
 }
 
+// ----------------------------------------
 
+const showCookie = () => {
+	const cookieEaten = localStorage.getItem('cookie')
+
+	if (cookieEaten) {
+		cookieBox.classList.add('hide')
+	}
+}
+
+const handleCookieBox = () => {
+	localStorage.setItem('cookie','true')
+	cookieBox.classList.add('hide')
+}
+
+// ----------------------------------------
 
 handleCurrentYear()
 burgerBtn.addEventListener('click', handleNav)
 window.addEventListener('scroll', handleScrollSpy)
+cookieBox.addEventListener('click', handleCookieBox)
+showCookie()

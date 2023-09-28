@@ -50,29 +50,46 @@ body {
 .cookie-box {
 	position: fixed;
 	bottom: 0;
-	padding: 2em;
+	padding: 2em 1.5em;
 	width: 100%;
-	height: 23vh;
-	text-align: center;
-	font-size: 2rem;
-	background-color: c.$white;
-	// opacity: 0;
-	// transform: translateY(100%);
-	animation: show-cookies .5s .5s forwards;
+	font-size: 1.3rem;
+	background-color: c.$dark-grey;
+	color: c.$white;
+	opacity: 0;
+	transform: translateY(100%);
+	animation: show-cookies 0.5s 0.5s forwards;
 
-	&::before {
-		position: absolute;
-		top: -280px;
-		right: 50px;
-		width: 400px;
-		height: 400px;
-		background-image: url('');
-		
-		content: '';
+	.btn-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		.cookie-btn {
+			margin-top: 1.2em;
+			padding: 0.5em 2.3em;
+			font-size: 1.6rem;
+			border: none;
+			border-radius: 0.5em;
+			color: c.$white;
+			background-color: c.$green;
+			transition: background-color 0.3s, transform 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				transform: scale(1.05);
+				background-color: c.$dark-green;
+			}
+		}
+	}
+
+	@keyframes show-cookies {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 }
-
-
 
 // header
 .header {
@@ -727,6 +744,18 @@ body {
 // ------------------ media ------------------
 
 @media (min-width: 568px) {
+	//cookies
+	.cookie-box {
+		padding: 2.2em;
+		font-size: 1.4rem;
+
+		.cookie-btn {
+			margin-top: 1.4em;
+			padding: 0.5em 2.5em;
+			font-size: 1.7rem;
+		}
+	}
+
 	//main
 	.main {
 		.aboutus {
@@ -887,6 +916,15 @@ body {
 }
 
 @media (min-width: 768px) {
+	//cookies
+	.cookie-box {
+		font-size: 1.5rem;
+
+		.cookie-btn {
+			padding: 0.5em 3em;
+		}
+	}
+
 	//hero-img
 	.hero-img {
 		background-image: url('../../dist/img/jungle-1280.jpg');
@@ -1120,6 +1158,13 @@ body {
 }
 
 @media (min-width: 992px) {
+	//cookies
+	.cookie-box {
+		.cookie-btn {
+			padding: 0.5em 4em;
+		}
+	}
+
 	// header
 	.header {
 		.navbar {
@@ -1286,6 +1331,14 @@ body {
 }
 
 @media (min-width: 1200px) {
+	//cookies
+	.cookie-box {
+		padding: 2.2em 4em;
+		.cookie-btn {
+			padding: 0.5em 4.5em;
+		}
+	}
+
 	// header
 	.header {
 		.navbar {
