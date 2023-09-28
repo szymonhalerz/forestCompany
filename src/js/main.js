@@ -43,6 +43,8 @@ const handleScrollSpy = () => {
 	}
 }
 
+
+
 handleCurrentYear()
 burgerBtn.addEventListener('click', handleNav)
 window.addEventListener('scroll', handleScrollSpy)
