@@ -29,7 +29,7 @@ const handleScrollSpy = () => {
 		const sections = []
 
 		scrollSpySections.forEach(section => {
-			if (window.scrollY <= section.offsetTop + section.offsetHeight - 200) {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight) {
 				sections.push(section)
 
 				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
@@ -39,14 +39,6 @@ const handleScrollSpy = () => {
 
 				activeSection.classList.add('active')
 			}
-
-			// if ( window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
-            //     const lastSection = document.querySelector('a:last-of-type')
-
-            //     menuItems.forEach(item => item.classList.remove('active'))
-
-            //     lastSection.classList.add('active')
-            // }
 		})
 	}
 }
