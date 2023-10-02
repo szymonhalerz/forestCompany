@@ -646,12 +646,12 @@ body {
 			}
 
 			.popup {
-				display: flex;
+				display: none;
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
 				position: absolute;
-				top: -100%;
+				// top: -100%;
 				left: 50%;
 				transform: translate(-50%, -50%);
 				padding: 3em 1.5em;
@@ -681,10 +681,6 @@ body {
 						color: c.$white;
 					}
 				}
-			}
-
-			.show-popup {
-				top: 170%;
 			}
 		}
 	}
@@ -992,10 +988,6 @@ body {
 							padding: 0.6em 2em;
 							font-size: 1.6rem;
 						}
-					}
-
-					.show-popup {
-						top: 100%;
 					}
 				}
 			}
@@ -1557,10 +1549,6 @@ body {
 
 					.popup {
 						width: 40%;
-					}
-
-					.show-popup {
-						top: 90%;
 					}
 				}
 			}

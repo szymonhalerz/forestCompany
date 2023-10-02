@@ -130,7 +130,7 @@ const checkErrors = () => {
 	})
 
 	if (errorCount === 0) {
-		popup.classList.add('show-popup')
+		popup.style.display = 'flex'
 	}
 }
 
