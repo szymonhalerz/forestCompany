@@ -182,9 +182,10 @@ body {
 	}
 
 	a.nav__link {
-		margin: 0.5em 0em;
+		margin: 0.8em 0em;
 		padding: 0.3em 1em;
 		color: c.$white;
+		font-size: 1.6rem;
 		text-decoration: none;
 		transition: font-weight 0.3s, transform 0.3s;
 
@@ -820,24 +821,16 @@ body {
 
 // ------------------ media ------------------
 
-@media (min-height: 310px) {
+@media (min-width: 310px) {
 	.nav-mobile {
 		a.nav__link {
-			margin: 1em 0em;
-			font-size: 1.9rem;
+			margin: 0.8em 0em;
+			font-size: 1.8rem;
 		}
 	}
 }
 
 @media (min-width: 568px) {
-	.nav-mobile {
-		a.nav__link {
-			margin: 1em 0em;
-			padding: 0.3em 1em;
-			font-size: 1.8rem;
-		}
-	}
-
 	//cookies
 	.cookie-box {
 		padding: 2.2em;
