@@ -134,28 +134,33 @@ const checkErrors = () => {
 	}
 }
 
-sendBtn.addEventListener('click', e => {
-	e.preventDefault()
+const checkSite = () => {
+	if (document.body.classList.contains('contact-site')) {
+		sendBtn.addEventListener('click', e => {
+			e.preventDefault()
 
-	checkForm(inputArr)
-	checkLenght(userName, 2)
-	checkLenght(surName, 2)
-	checkEmail(email)
-	checkMsg(textMsg)
-	checkErrors()
-})
+			checkForm(inputArr)
+			checkLenght(userName, 2)
+			checkLenght(surName, 2)
+			checkEmail(email)
+			checkMsg(textMsg)
+			checkErrors()
+		})
 
-clearBtn.addEventListener('click', e => {
-	e.preventDefault()
+		clearBtn.addEventListener('click', e => {
+			e.preventDefault()
 
-	inputArr.forEach(el => {
-		el.value = ''
-		clearError(el)
-	})
-})
+			inputArr.forEach(el => {
+				el.value = ''
+				clearError(el)
+			})
+		})
+	}
+}
 
 handleCurrentYear()
 burgerBtn.addEventListener('click', handleNav)
 window.addEventListener('scroll', handleScrollSpy)
 cookieBtn.addEventListener('click', handleCookieBox)
 showCookie()
+checkSite()
