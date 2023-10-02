@@ -1050,17 +1050,17 @@ body {
 
 		.hero__text {
 			p {
-				font-size: 1.7rem;
+				font-size: 1.9rem;
 			}
 
 			h1 {
-				font-size: 2.5rem;
+				font-size: 3.1rem;
 			}
 		}
 	}
 
 	.section-title {
-		font-size: 2.3rem;
+		font-size: 2.8rem;
 	}
 
 	//main
@@ -1076,7 +1076,7 @@ body {
 			}
 
 			&__img {
-				margin-right: 1.5em;
+				margin-right: 2em;
 			}
 
 			&__text {
@@ -1084,33 +1084,45 @@ body {
 				line-height: 2.8rem;
 
 				h3 {
-					font-size: 1.8rem;
+					font-size: 2rem;
 					margin-bottom: 0.4em;
 				}
 			}
 		}
 
 		.banner {
+			height: 30vh;
+
 			&__text {
 				padding: 1em 4em;
-				font-size: 1.9rem;
+				font-size: 2.3rem;
 			}
 		}
 
 		//offer
 		.offer {
+			.sub-title {
+				margin-bottom: 2em;
+				font-size: 1.8rem;
+			}
+
 			&__cards {
 				flex-direction: row;
 				justify-content: center;
 				flex-wrap: wrap;
 
+
 				.card {
+					.card-title {
+						font-size: 2.3rem;
+					}
+
 					margin: 1em;
-					width: 37%;
+					width: 42%;
 				}
 
 				.select-btn {
-					font-size: 1.7rem;
+					font-size: 1.8rem;
 				}
 			}
 
@@ -1125,13 +1137,17 @@ body {
 		.all-offer {
 			padding: 2em 3em;
 
+			.sub-title {
+				font-size: 1.9rem;
+			}
+
 			&__cards {
 				.card {
 					flex-direction: row;
 					width: 90%;
 
 					.card__img {
-						padding: 12em;
+						padding: 12em 5em;
 						width: 50%;
 					}
 
@@ -1148,12 +1164,14 @@ body {
 
 			.sub-title {
 				margin-bottom: 4em;
+				font-size: 1.9rem;
 			}
 
 			.form {
 				form {
 					.form-box {
 						margin-bottom: 1em;
+
 					}
 
 					.form-box .error-text {
@@ -1336,18 +1354,23 @@ body {
 	.hero-img {
 		.hero__text {
 			p {
-				font-size: 1.8rem;
+				font-size: 2rem;
 			}
 
 			h1 {
-				font-size: 2.7rem;
+				font-size: 3.4rem;
 			}
 		}
 	}
 
 	// main
 	.main {
+		.section-title {
+			font-size: 3.5rem;
+		}
+
 		.aboutus {
+			margin-top: 2em;
 			padding: 0em 3em;
 
 			&__img,
@@ -1364,16 +1387,18 @@ body {
 				line-height: 2.9rem;
 
 				h3 {
-					font-size: 1.9rem;
+					font-size: 2.3rem;
 					margin-bottom: 0.4em;
 				}
 			}
 		}
 
 		.banner {
+			height: 35vh;
+			
 			&__text {
 				padding: 1.1em 7em;
-				font-size: 2rem;
+				font-size: 2.5rem;
 			}
 		}
 
@@ -1381,13 +1406,14 @@ body {
 		.offer {
 			&__cards {
 				.card {
-					width: 30%;
+					width: 33%;
 				}
 			}
 
 			.btn-more {
 				.more-offer-btn {
 					padding: 1em 4.5em;
+					font-size: 1.8rem;
 				}
 			}
 		}
