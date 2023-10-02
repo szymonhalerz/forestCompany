@@ -832,7 +832,7 @@ body {
 @media (min-width: 568px) {
 	.nav-mobile {
 		a.nav__link {
-			margin: 0.5em 0em;
+			margin: 1em 0em;
 			padding: 0.3em 1em;
 			font-size: 1.8rem;
 		}
@@ -1035,6 +1035,12 @@ body {
 }
 
 @media (min-width: 768px) {
+	.nav-mobile {
+		a.nav__link {
+			font-size: 2rem;
+		}
+	}
+
 	//cookies
 	.cookie-box {
 		font-size: 1.5rem;
