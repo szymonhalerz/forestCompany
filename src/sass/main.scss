@@ -539,74 +539,152 @@ body {
 	padding: 0em 1.5em;
 
 	.sub-title {
+		margin-bottom: 2em;
 		font-size: 1.4rem;
 		text-align: center;
 	}
 
-	.form-box {
-		margin-top: 2em;
-
+	.form {
 		form {
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
-			align-items: center;
+			flex-direction: column;
+			padding: 0.5em;
+			font-size: 1.5rem;
 
-			input,
-			textarea {
-				margin-bottom: 1em;
-				padding: 0.7em 1em;
-				width: 100%;
-				max-width: 800px;
-				font-size: 1.4rem;
-				font-family: inherit;
-				border: 1px solid c.$grey;
-				border-radius: 0.5em;
+			.form-box {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				margin-bottom: 0.7em;
+
+				label {
+					display: inline-block;
+					margin-bottom: 0.4em;
+					width: 100%;
+					max-width: 800px;
+					font-size: 1.4rem;
+				}
+
+				input,
+				textarea {
+					padding: 0.6em 1em;
+					width: 100%;
+					max-width: 800px;
+					font-size: 1.4rem;
+					border-radius: 0.5em;
+					border: 1px solid c.$grey;
+				}
+
+				input:focus,
+				textarea:focus {
+					outline: none;
+					background-color: rgba(0, 128, 0, 0.091);
+					border: 1px solid c.$green;
+				}
+
+				textarea {
+					min-height: 8em;
+					font-family: inherit;
+				}
 			}
 
-			input:focus,
-			textarea:focus {
-				outline: none;
-				border: 1px solid c.$green;
+			.form-box.error input,
+			.form-box.error textarea {
+				border: 1px solid red;
+				background-color: rgba(255, 0, 0, 0.1);
 			}
 
-			textarea {
-				margin-bottom: 1em;
-				min-height: 8em;
-				resize: vertical;
+			.form-box .error-text {
+				margin: 0.4em 0 0 1em;
+				font-size: 1.3rem;
+				color: red;
+				visibility: hidden;
+			}
+
+			.form-box.error .error-text {
+				visibility: visible;
 			}
 
 			.rodo-box {
-				margin-bottom: 2.2em;
-				max-width: 800px;
-				font-size: 1.1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				p {
+					margin-bottom: 1em;
+					width: 100%;
+					max-width: 800px;
+					text-align: center;
+					font-size: 1.2rem;
+				}
 			}
 
 			.btns {
 				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				margin-top: 1.3em;
+				width: 100%;
+
+				.send,
+				.clear {
+					padding: 0.7em 1.2em;
+					width: 40%;
+					background-color: c.$green;
+					color: c.$white;
+					font-size: 1.5rem;
+					border-radius: 0.5em;
+					border: none;
+					transition: background-color 0.3s;
+					cursor: pointer;
+
+					&:hover {
+						background-color: c.$black;
+					}
+				}
+			}
+
+			.popup {
+				display: flex;
 				justify-content: center;
 				align-items: center;
-				width: 100%;
-				max-width: 800px;
+				flex-direction: column;
+				position: absolute;
+				top: -100%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 3em 1.5em;
+				width: 80%;
+				background-color: c.$light-grey;
+				border-radius: 0.5em;
+				border: 2px solid c.$black;
+				transition: top 0.5s;
 
-				button {
-					padding: 0.7em 2em;
-					width: 85%;
-					background-color: c.$green;
-					color: #fff;
-					font-weight: bold;
+				p {
+					text-align: center;
+					margin-bottom: 1em;
+				}
+
+				.close {
+					padding: 0.5em 1.5em;
 					border: none;
 					border-radius: 0.5em;
 					font-size: 1.5rem;
-					box-shadow: 0px 0px 10px #777;
-					transition: background-color 0.3s, color 0.3s;
-					cursor: pointer;
-				}
-
-				button:hover {
-					background-color: c.$black;
 					color: c.$white;
+					background: c.$green;
+					cursor: pointer;
+					transition: background-color 0.3s, color 0.3s;
+
+					&:hover {
+						background-color: c.$black;
+						color: c.$white;
+					}
 				}
+			}
+
+			.show-popup {
+				top: 170%;
 			}
 		}
 	}
@@ -871,24 +949,53 @@ body {
 				font-size: 1.5rem;
 			}
 
-			.form-box {
-				margin-top: 3em;
-
+			.form {
 				form {
-					input,
-					textarea {
-						margin-bottom: 1em;
-						padding: 0.7em 1em;
+					font-size: 1.6rem;
+
+					.form-box {
+						margin-bottom: 0.8em;
+
+						label {
+							font-size: 1.5rem;
+						}
+
+						input,
+						textarea {
+							padding: 0.7em 1.2em;
+							font-size: 1.5rem;
+						}
+					}
+
+					.form-box .error-text {
+						font-size: 1.4rem;
 					}
 
 					.btns {
-						justify-content: end;
-						margin-top: 1.5em;
-
-						button {
-							padding: 0.8em 2.5em;
-							width: 50%;
+						.send,
+						.clear {
+							width: 37%;
+							font-size: 1.6rem;
 						}
+					}
+
+					.popup {
+						padding: 3em 1.5em;
+						width: 80%;
+						border: 2px solid c.$black;
+
+						p {
+							margin-bottom: 1em;
+						}
+
+						.close {
+							padding: 0.6em 2em;
+							font-size: 1.6rem;
+						}
+					}
+
+					.show-popup {
+						top: 100%;
 					}
 				}
 			}
@@ -1039,19 +1146,36 @@ body {
 		.contact {
 			padding: 0em 4em;
 
-			.form-box {
-				margin-top: 3em;
+			.sub-title {
+				margin-bottom: 4em;
+			}
 
+			.form {
 				form {
-					input,
-					textarea {
-						margin-bottom: 1.5em;
+					.form-box {
+						margin-bottom: 1em;
+					}
+
+					.form-box .error-text {
+						font-size: 1.5rem;
 					}
 
 					.btns {
-						button {
-							padding: 1em 3em;
-							width: 45%;
+						.send,
+						.clear {
+							padding: 1em 2em;
+							width: 33%;
+						}
+					}
+
+					.popup {
+						p {
+							font-size: 1.7rem;
+							margin-bottom: 2em;
+						}
+
+						.close {
+							padding: 0.8em 2.7em;
 						}
 					}
 				}
@@ -1270,16 +1394,21 @@ body {
 
 		//contact
 		.contact {
-			.form-box {
+			.form {
 				form {
-					input,
-					textarea {
-						margin-bottom: 1.7em;
+					.form-box {
+						margin-bottom: 1.3em;
+
+						label {
+							font-size: 1.6rem;
+						}
 					}
 
+
 					.btns {
-						button {
-							width: 40%;
+						.send,
+						.clear {
+							width: 27%;
 						}
 					}
 				}
@@ -1420,15 +1549,10 @@ body {
 
 		//contact
 		.contact {
-			.form-box {
+			.form {
 				form {
-					input,
-					textarea {
-						margin-bottom: 2em;
-					}
-
-					.btns {
-						margin: 0em 2em;
+					.rodo-box {
+						margin-bottom: 1.4em;
 					}
 				}
 			}

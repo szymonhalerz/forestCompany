@@ -60,23 +60,45 @@
 				<div class="contact" id="contact">
 					<p class="sub-title">Skontaktuj się z nami poprzez formularz lub przez nasze social media.</p>
 
-					<div class="form-box">
+					<div class="form">
 						<form>
-							<input type="text" class="name" placeholder="Podaj imię" />
-							<input type="text" class="surname" placeholder="Podaj nazwisko" />
-							<input type="email" class="email" placeholder="Podaj adres e-mail" />
-							<textarea class="msg" placeholder="Twoja wiadomość"></textarea>
+							<div class="form-box">
+								<label for="username">Imię:</label>
+								<input type="text" id="username" placeholder="Podaj swoję imię" />
+								<p class="error-text">error</p>
+							</div>
+							<div class="form-box">
+								<label for="surname">Nazwisko:</label>
+								<input type="text" id="surname" placeholder="Podaj swoję nazwisko" />
+								<p class="error-text">error</p>
+							</div>
+							<div class="form-box">
+								<label for="email">Adres e-mail:</label>
+								<input type="email" id="email" placeholder="Podaj swój adres e-mail" />
+								<p class="error-text">error</p>
+							</div>
+							<div class="form-box">
+								<label for="textMsg">Wiadomość do nas:</label>
+								<textarea id="textMsg" placeholder="Tutaj wpisz swoją wiadomość"></textarea>
+								<p class="error-text">error</p>
+							</div>
+
 							<div class="rodo-box">
-								<!-- <input type="checkbox" class="checkbox" /> -->
 								<p>
-									Klikając przycisk wyślij akceptujesz regulamin serwisu forestGroup.pl i wyrażasz zgodę na przetwarzanie przez XYZ SA.
-									udostępnionych przeze mnie danych osobowych na zasadach opisanych w Polityce Prywatności. Oświadczam,
-									że są mi znane cele przetwarzania danych oraz moje uprawnienia.
+									Klikając przycisk wyślij akceptujesz regulamin serwisu forestGroup.pl i wyrażasz zgodę na
+									przetwarzanie przez XYZ SA. udostępnionych przeze mnie danych osobowych na zasadach opisanych w
+									Polityce Prywatności. Oświadczam, że są mi znane cele przetwarzania danych oraz moje uprawnienia.
 								</p>
 							</div>
 
 							<div class="btns">
+								<button class="clear">Wyczyść</button>
 								<button class="send">Wyślij</button>
+							</div>
+
+							<div class="popup">
+								<p>Formularz został poprawnie wysłany!</p>
+								<button class="close">Zamknij</button>
 							</div>
 						</form>
 					</div>
@@ -162,6 +184,19 @@
 				<p class="footer__bottom-text">&copy;<span class="footer__year">2023</span> Forest Group Company Ltd.</p>
 			</div>
 		</footer>
+
+		<div class="cookie-box">
+			<div class="wrapper">
+				<p>
+					Używamy cookies i podobnych technologii m.in. w celach: świadczenia usług, reklamy, statystyk. Korzystanie z
+					witryny bez zmiany ustawień Twojej przeglądarki oznacza, że będą one umieszczane w Twoim urządzeniu końcowym.
+					Pamiętaj, że zawsze możesz zmienić te ustawienia. Szczegóły znajdziesz w Polityce Prywatności.
+				</p>
+				<div class="btn-box">
+					<button class="cookie-btn">Akceptuj😉</button>
+				</div>
+			</div>
+		</div>
 
 		<script src="dist/js/main.min.js"></script>
 	</body>
