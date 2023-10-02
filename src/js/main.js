@@ -19,14 +19,10 @@ const sendBtn = document.querySelector('.send')
 const popup = document.querySelector('.popup')
 const closePopupBtn = document.querySelector('.close')
 
-// ----------------------------------------
-
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
 }
-
-// ----------------------------------------
 
 const handleNav = () => {
 	document.body.classList.toggle('sticky-body')
@@ -60,8 +56,6 @@ const handleScrollSpy = () => {
 	}
 }
 
-// ----------------------------------------
-
 const showCookie = () => {
 	const cookieEaten = localStorage.getItem('cookie')
 
@@ -74,8 +68,6 @@ const handleCookieBox = () => {
 	localStorage.setItem('cookie', 'true')
 	cookieBox.classList.add('hide')
 }
-
-// ----------------------------------------
 
 const inputArr = [userName, surName, email, textMsg]
 
@@ -103,10 +95,8 @@ const checkForm = input => {
 }
 
 const checkLenght = (input, min) => {
-	const name = input.previousElementSibling.textContent.slice(0, -1)
-
 	if (input.value.length < min) {
-		showError(input, `${name} jest nieprawidłowe.`)
+		showError(input, `${input.previousElementSibling.textContent.slice(0, -1)} jest nieprawidłowe.`)
 	}
 }
 
@@ -163,8 +153,6 @@ clearBtn.addEventListener('click', e => {
 		clearError(el)
 	})
 })
-
-// ----------------------------------------
 
 handleCurrentYear()
 burgerBtn.addEventListener('click', handleNav)
