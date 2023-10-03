@@ -8,6 +8,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/20e2212097.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="dist/css/hamburger.min.css" />
 		<link rel="stylesheet" href="dist/css/main.min.css" />
 	</head>
@@ -198,6 +199,14 @@
 			</div>
 		</div>
 
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				startEvent: 'DOMContentLoaded',
+				offset: 210,
+				once: true,
+			})
+		</script>
 		<script src="dist/js/main.min.js"></script>
 	</body>
 </html>

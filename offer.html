@@ -8,6 +8,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/20e2212097.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="dist/css/hamburger.min.css" />
 		<link rel="stylesheet" href="dist/css/main.min.css" />
 	</head>
@@ -61,7 +62,7 @@
 					<p class="sub-title">Wybierz jedna z naszych wspaniałych ofert!</p>
 
 					<div class="all-offer__cards">
-						<div class="card first">
+						<div class="card first" data-aos="flip-right" data-aos-delay="50">
 							<div class="card__img"></div>
 							<div class="card__text">
 								<p class="card-title">Demo</p>
@@ -79,7 +80,7 @@
 							</div>
 						</div>
 
-						<div class="card second">
+						<div class="card second" data-aos="flip-right" data-aos-delay="100">
 							<div class="card__img"></div>
 							<div class="card__text">
 								<p class="card-title">Student</p>
@@ -97,7 +98,7 @@
 							</div>
 						</div>
 
-						<div class="card third">
+						<div class="card third" data-aos="flip-right" data-aos-delay="150">
 							<div class="card__img"></div>
 							<div class="card__text">
 								<p class="card-title">Standard</p>
@@ -115,7 +116,7 @@
 							</div>
 						</div>
 
-						<div class="card fourth">
+						<div class="card fourth" data-aos="flip-right" data-aos-delay="200">
 							<div class="card__img"></div>
 							<div class="card__text">
 								<p class="card-title">Enterprise</p>
@@ -133,7 +134,7 @@
 							</div>
 						</div>
 
-						<div class="card fifth">
+						<div class="card fifth" data-aos="flip-right" data-aos-delay="250">
 							<div class="card__img"></div>
 							<div class="card__text">
 								<p class="card-title">Premium</p>
@@ -203,6 +204,14 @@
 			</div>
 		</div>
 
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				startEvent: 'DOMContentLoaded',
+				offset: 210,
+				once: true,
+			})
+		</script>
 		<script src="dist/js/main.min.js"></script>
 	</body>
 </html>
