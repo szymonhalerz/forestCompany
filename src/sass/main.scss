@@ -185,7 +185,7 @@ body {
 		margin: 0.8em 0em;
 		padding: 0.3em 1em;
 		color: c.$white;
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		text-decoration: none;
 		transition: font-weight 0.3s, transform 0.3s;
 
@@ -556,7 +556,7 @@ body {
 					margin-bottom: 0.4em;
 					width: 100%;
 					max-width: 800px;
-					font-size: 1.4rem;
+					font-size: 1.5rem;
 				}
 
 				input,
@@ -824,8 +824,8 @@ body {
 @media (min-width: 310px) {
 	.nav-mobile {
 		a.nav__link {
-			margin: 0.8em 0em;
-			font-size: 1.8rem;
+			margin: 0.7em 0em;
+			font-size: 1.7rem;
 		}
 	}
 }
@@ -1111,7 +1111,6 @@ body {
 				justify-content: center;
 				flex-wrap: wrap;
 
-
 				.card {
 					.card-title {
 						font-size: 2.3rem;
@@ -1145,14 +1144,38 @@ body {
 				.card {
 					flex-direction: row;
 					width: 90%;
+					height: 100%;
+					max-height: 270px;
 
 					.card__img {
-						padding: 12em 5em;
+						padding: 10em 5em;
 						width: 50%;
 					}
 
 					.card__text {
 						width: 50%;
+
+						.card-title {
+							font-size: 1.7rem;
+						}
+
+						.card-price {
+							font-size: 2.5rem;
+						}
+
+						.options {
+							margin-bottom: 0.8em;
+							font-size: 1.4rem;
+
+							p {
+								margin-bottom: 0.4em;
+							}
+						}
+
+						.select-btn {
+							padding: 0.5em 4em;
+							font-size: 1.4rem;
+						}
 					}
 				}
 			}
@@ -1171,7 +1194,6 @@ body {
 				form {
 					.form-box {
 						margin-bottom: 1em;
-
 					}
 
 					.form-box .error-text {
@@ -1395,7 +1417,7 @@ body {
 
 		.banner {
 			height: 35vh;
-			
+
 			&__text {
 				padding: 1.1em 7em;
 				font-size: 2.5rem;
@@ -1414,6 +1436,37 @@ body {
 				.more-offer-btn {
 					padding: 1em 4.5em;
 					font-size: 1.8rem;
+				}
+			}
+		}
+
+		//all-offer
+		.all-offer {
+			.card {
+				max-height: 330px;
+
+				.card__text {
+					.card-title {
+						font-size: 2.3rem;
+					}
+
+					.card-price {
+						font-size: 3.3rem;
+					}
+
+					.options {
+						margin-bottom: 0.8em;
+						font-size: 1.5rem;
+
+						p {
+							margin-bottom: 0.5em;
+						}
+					}
+
+					.select-btn {
+						padding: 0.5em 4em;
+						font-size: 1.7rem;
+					}
 				}
 			}
 		}
@@ -1542,30 +1595,28 @@ body {
 
 			&__cards {
 				.card {
+					max-height: 350px;
+
 					.card__img {
-						padding: 12.7em 0em;
+						padding: 12em 5em;
 					}
 
 					.card__text {
 						.card-title {
-							font-size: 2.4rem;
+							font-size: 2.3rem;
 						}
 
 						.card-price {
-							font-size: 3.7rem;
+							font-size: 3.5rem;
 						}
 
 						.options {
-							font-size: 1.7rem;
+							margin-bottom: 0.8em;
+							font-size: 1.6rem;
 
 							p {
-								margin-bottom: 0.8em;
+								margin-bottom: 0.6em;
 							}
-						}
-
-						.select-btn {
-							padding: 0.5em 4.5em;
-							font-size: 1.8rem;
 						}
 					}
 				}
